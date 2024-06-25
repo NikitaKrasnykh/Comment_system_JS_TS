@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./pages/index.css" />
+    <title>Комментари</title>
+  </head>
+
+  <body class="page">
+    <header class="header"></header>
+
+    <aside class="sidebar"></aside>
+
+    <main>
+      <section class="comments">
+        <div class="comments__wrapper">
+          <div class="comments__info"></div>
+          <div class="comments__info"></div>
+          <div class="comments__info"></div>
+          <div class="comments__info"></div>
+          <div class="comments__info"></div>
+          <div class="comments__info"></div>
+          <div class="comments__info"></div>
+          <div class="comments__info"></div>
+          <div class="comments__info"></div>
+        </div>
+        <div class="comments__navigation">
+          <button type="button" class="comments__number-button">
+            <p class="comments__number-text">Комментарии</p>
+            <p class="comments__number-span js-comment-total">(0)</p>
+          </button>
+          <div class="comments__sorting-container">
+            <button class="comments__select-button">
+              <span>По количеству оценок</span>
+            </button>
+            <button class="comments__sort-button"></button>
+            <div class="comments__select-menu">
+              <div class="comments__select-option js-filter-btn" data-filter="date">По дате</div>
+              <div class="comments__select-option js-filter-btn" data-filter="quantityRate">По количеству оценок</div>
+              <div class="comments__select-option js-filter-btn" data-filter="quantityAnswer">
+                По количеству ответов
+              </div>
+            </div>
+          </div>
+          <button data-filter="like" class="comments__fav-display-button js-filter-btn">
+            Избранное
+            <img class="comments__fav-display-img" src="./Images/fav_sort_button.png" alt="избранное" />
+          </button>
+        </div>
+        <form class="comments__add-comment-form" name="comment" id="addCommentForm">
+          <img class="comments__user-img" src="./Images/user_photo_1.jpg" alt="фото пользователя" />
+          <input class="comments__user-name" name="name" placeholder="Имя Пользователя" />
+          <p class="comments__add-comment-txt-limit">Макс. 1000 символов</p>
+          <p class="comments__add-comment-error-msg">Слишком длинное сообщение</p>
+          <textarea
+            class="comments__add-comment-textarea"
+            name="comment"
+            placeholder="Введите текст сообщения..."
+            maxlength="1000"
+            rows="1"
+          ></textarea>
+          <button class="comments__add-comment-button comments__add-comment-button_type_disabled" disabled>
+            Отправить
+          </button>
+        </form>
+        <div class="comments__display-container"></div>
+      </section>
+    </main>
+    <script src="./main.js?v=4" type="module"></script>
+  </body>
+</html>

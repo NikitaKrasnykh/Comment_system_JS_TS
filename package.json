@@ -1,0 +1,35 @@
+{
+  "name": "comment-system-with-js-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "scripts": {
+    "dev": "nodemon ./src/main.ts",
+    "build": "tsc",
+    "start": "npm run build && node ./main.js",
+    "lint": "npx eslint ./src",
+    "format": "npx eslint ./src --fix",
+    "serve": "browser-sync start --server"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.9.0",
+    "@typescript-eslint/eslint-plugin": "^6.11.0",
+    "@typescript-eslint/parser": "^6.11.0",
+    "eslint": "^8.53.0",
+    "husky": "^8.0.3",
+    "nodemon": "^3.0.1",
+    "prettier": "^3.1.0",
+    "rimraf": "^5.0.5",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {}
+}
